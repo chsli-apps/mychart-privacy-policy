@@ -1,0 +1,206 @@
+﻿/* BEGIN EPIC COMMUNITY MEMBER CUSTOM CSS */
+
+/* Remove the Customer Service Card - Uncommented 4/21
+a.card.custsvc
+{
+Display:none;
+}
+*/
+/* Change Display of Arrival Locations */
+div.departmentaddress {
+                /* temp removed custom font to hide addresses
+		font-size: .7em !important; */
+		display:none;
+}
+div.arrivallocation {
+                /* temp removed custom color to hide addresses
+		font-size: 1.2em !important;
+                color: #FF0000 !important;
+                font-weight: bold !important; */
+		display:none;
+}
+div.address.subtle {
+                display:none;
+}
+/* Change to hide 'Contact Customer Service' under Related Links */
+body.md_review_index div.quickLinks > a[href$="mode=custsvc"] {
+		display: none;
+
+		}
+
+/* Change to hide CareGiver form user preferences */
+div#caregiverinfo.section.indented  {
+		display: none;
+		}
+/* Change to hide the 'use my preferences' button */
+label#schedpref_2.togglebutton {
+                display:none;
+}
+
+/* Change to hide 'Any Location' for Scheduling */
+
+label#centers_1.togglebutton {
+	display:none
+}
+
+/* Change to hide DinersClub from Payment Page */
+#pmtMethodsAcceptedIcons .allowedBrandsIcon[alt="Diners Club"]{
+display:none
+}
+
+/* Feb2020 changes start here */
+
+/* Change to add Video Visit icon to Homepage for CHS eVisit */
+
+  .features .icon-video_visit {
+    background-image: url("../images/quicklinks/video_visit.png"); }
+  .features .icon-password {
+    background-image: url("../images/quicklinks/change_password.png"); }
+  .features .info {
+    font-size: 0.9rem; }
+	
+/* CHSLI updated height from 32rem to 1000px for the Instamed ExernalPayment.css */
+#iFrameLoadingIndicator.mobileExtPmtPage,
+#extPmtPageFrame.mobileExtPmtPage{
+	height: 1000px;
+}
+/* CHSLI updated height from 21rem to 1000pxfor the Instamed ExernalPayment.css */
+#extPmtPageFrame{
+	border-width: 0px;
+	height: 1000px;
+	overflow-y: hidden;
+	width: 100%;
+}
+/* CHSLI updated height from 14rem to 800pxfor the Instamed ExernalPayment.css */
+#guestPay-content #extPmtPageFrame, #guestPay-content #iFrameLoadingIndicator {
+  height: 800px; }
+
+/* Change Height for OpenScheduling Widget from 490 to 850px to remove the scroll bars */
+/*  NOTE:  This section is not being respected via override, must manually change EmbeddedOpenScheduling.css */
+div.setOfStepsContainer .stepContainer {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    display: inline-block;
+    height: 100vh !important;
+    margin: 0.25rem;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    vertical-align: top;
+    width: 690px; }
+	
+/* OpenScheduler Override */
+
+/* filters */
+.filterButtonContainer .filterControlsParent .dayTimeControl {
+   position: relative;
+}
+
+.stepContainer .filterControl .optionsgroup {
+   position: absolute;
+   left: 0;
+   top: 70px;
+   width: 300px;
+   min-width: 300px;
+}
+
+.stepContainer .filterControl #locationGroup {
+   left: auto;
+   right: 0;
+}
+
+.stepContainer .filterControl .optionsgroup .dayOfWeek {
+   padding: 0;
+   margin-bottom: 15px;
+}
+
+.stepContainer .filterControl .optionsgroup .dayOfWeek li {
+   width: 100%;
+   border-bottom: 1px solid #f2f2f2;
+   padding: 7px 0;
+}
+
+input.prettycheck:checked + label::before,
+input.buttoncheck:checked + label.buttoncheck::before {
+   background-color: #005AE8;
+   border-color: #005AE8;
+}
+
+/* Removed for MyChart Branding App on 11/23/22
+.button.inlinesave,
+.button.inlinesave:focus,
+.button.inlinesave:hover {
+   background-color: transparent;
+   border-radius: 25px;
+   padding: 10px 30px;
+   line-height: 1;
+   border: 2px solid #005AE8;
+   color: #005AE8;
+   width: 145px;
+}
+*/
+
+.filterButtonContainer .filterControlsParent .locationControl {
+   position: relative;
+}
+
+/* card */
+.card {
+   border-radius: 10px;
+   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
+   margin: 15px 0;
+   padding: 30px;
+}
+
+.card .cardline.partial {
+   width: 100%;
+}
+
+.card label.togglebutton[for],
+.card input.buttoncheck + label.buttoncheck {
+   border-radius: 5px;
+}
+
+input:checked + label.togglebutton[for],
+input.buttoncheck:checked + label.buttoncheck {
+   background-color: #005AE8;
+   color: white;
+}
+
+/* heading */
+.stepContainer .openingsData .card > .header {
+   margin: 0 0 15px 0;
+}
+
+/* buttons */
+.stepContainer .openingsData .plain .slotslist .slotdetailaction {
+   width: 145px;
+}
+
+.stepContainer .openingsData .slotslist .slotdetailaction {
+   background-color: white;
+   border: 2px solid #005AE8;
+   border-radius: 25px;
+   color: #005AE8;
+   height: auto;
+}
+
+.stepContainer .openingsData .slotslist .slotdetailaction:focus,
+.stepContainer .openingsData .slotslist .slotdetailaction:hover,
+.stepContainer .openingsData .slotslist .slotdetailaction.selected {
+   background-color: #005AE8;
+   color: white;
+   transform: scale(1);
+}
+
+/* expand */
+.stepContainer .openingsData .plain .expandSlots {
+   margin: 15px 0 0;
+}
+
+.statusClosed,
+.subtle,
+.subtlecolor {
+   color: #005AE8;
+}
